@@ -46,9 +46,10 @@ O projeto dispensa softwares proprietários de EDA, rodando inteiramente sobre f
 ├── Makefile              # Automação de síntese, place-and-route e gravação
 └── README.md
 
----
+```
 
-## ⚙️ Como Compilar e Executar
+
+## Como Compilar e Executar
 
 Este projeto utiliza uma árvore de compilação automatizada via **Makefile** para alternar facilmente entre os alvos de hardware (`tangnano1k` e `tangnano9k`).
 
