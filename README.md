@@ -8,7 +8,7 @@ O projeto evoluiu em duas etapas principais:
 
 ---
 
-## 🚀 Visão Geral da Arquitetura
+## Visão Geral da Arquitetura
 
 O núcleo implementa uma arquitetura RISC-V monociclo de 32 bits (*Single-Cycle Datapath*), contemplando:
 * **Unidade de Controle:** Decodificação de instruções e geração de sinais de controle.
@@ -18,7 +18,7 @@ O núcleo implementa uma arquitetura RISC-V monociclo de 32 bits (*Single-Cycle 
 
 ---
 
-## 🛠️ Ferramentas Utilizadas (Toolchain 100% Open Source)
+## Ferramentas Utilizadas (Toolchain 100% Open Source)
 
 O projeto dispensa softwares proprietários de EDA, rodando inteiramente sobre ferramentas livres:
 
@@ -29,7 +29,7 @@ O projeto dispensa softwares proprietários de EDA, rodando inteiramente sobre f
 
 ---
 
-## 📂 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```tree
 .
@@ -45,3 +45,18 @@ O projeto dispensa softwares proprietários de EDA, rodando inteiramente sobre f
 │   └── tb_riscv.v
 ├── Makefile              # Automação de síntese, place-and-route e gravação
 └── README.md
+
+---
+
+## ⚙️ Como Compilar e Executar
+
+Este projeto utiliza uma árvore de compilação automatizada via **Makefile** para alternar facilmente entre os alvos de hardware (`tangnano1k` e `tangnano9k`).
+
+### 1. Pré-requisitos (Toolchain Open-Source)
+
+Certifique-se de ter as ferramentas open-source instaladas em seu ambiente Linux (Ubuntu/Debian):
+
+```bash
+sudo apt update
+sudo apt install yosys nextpnr-gowin openfpgaloader iverilog gtkwave make
+
