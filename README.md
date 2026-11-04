@@ -1,10 +1,14 @@
-# RISC-V Monociclo Softcore (Tang Nano 1K & 9K)
+# Mandacaru RISC-V 
 
-Um processador RISC-V monociclo minimalista (subset RV32I) implementado em **Verilog**, projetado para fins educacionais e experimentação em FPGA, utilizando exclusivamente o ecossistema de ferramentas abertas (*Open-Source FPGA Toolchain*).
+<p align="center">
+<img width="500" height="300" alt="Mandacaru risc-v" src="https://github.com/user-attachments/assets/d4d222d7-b3d2-4218-b12e-e607eefae5a7" />
+</p>
+
+Processador RISC-V monociclo minimalista (subconjunto do RV32I) implementado em **Verilog**, projetado para fins educacionais e experimentação em FPGAs Gowin, utilizando exclusivamente o ecossistema de ferramentas abertas (*Open-Source FPGA Toolchain*).
 
 O projeto evoluiu em duas etapas principais:
-1. **Tang Nano 1K (Gowin GW1NZ-1):** Validação do datapath monociclo básico e controle de I/O para piscar um LED integrado.
-2. **Tang Nano 9K (Gowin GW1N-9C):** Expansão dos recursos lógicos para execução de instruções aritméticas e manipulação de registradores em hardware real.
+1. **Sipeed Tang Nano 1K (Gowin GW1NZ-1):** Validação do datapath monociclo básico e controle de I/O para piscar um LED integrado.
+2. **Sipeed Tang Nano 9K (Gowin GW1N-9C):** Expansão dos recursos lógicos para execução de instruções aritméticas e manipulação de registradores em hardware real.
 
 ---
 
