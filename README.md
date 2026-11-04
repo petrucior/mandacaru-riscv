@@ -196,7 +196,7 @@ nano9k/
 ```
 
 <a name="ferramentas"></a>
-## Ferramentas Utilizadas (Toolchain 100% Open Source)
+## Ferramentas (Toolchain 100% Open Source)
 
 O projeto dispensa softwares proprietários de EDA, rodando inteiramente sobre ferramentas livres:
 
