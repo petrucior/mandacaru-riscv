@@ -7,8 +7,8 @@
 Processador RISC-V monociclo minimalista (subconjunto do RV32I) implementado em **Verilog**, projetado para fins educacionais e experimentação em FPGAs da Gowin, utilizando exclusivamente o ecossistema de ferramentas abertas (*Open-Source FPGA Toolchain*).
 
 O projeto evoluiu em duas etapas principais:
-1. **Sipeed Tang Nano 1K (Gowin GW1NZ-1):** Validação do datapath monociclo básico e controle de I/O para piscar um LED integrado.
-2. **Sipeed Tang Nano 9K (Gowin GW1N-9C):** Expansão dos recursos lógicos para execução de instruções aritméticas e manipulação de registradores em hardware real.
+1. **[Sipeed Tang Nano 1K (Gowin GW1NZ-1)](https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-1K/Nano-1k.html):** Validação do datapath monociclo básico e controle de I/O para piscar um LED integrado.
+2. **[Sipeed Tang Nano 9K (Gowin GW1N-9C)](https://wiki.sipeed.com/hardware/en/tang/Tang-Nano-9K/Nano-9K.html):** Expansão dos recursos lógicos para execução de instruções aritméticas e manipulação de registradores em hardware real.
 
 
 ## Visão Geral da Arquitetura
