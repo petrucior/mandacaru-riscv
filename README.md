@@ -164,6 +164,19 @@ Imagem de ROM gerada (`firmware/firmware.hex`) e execução:
 O valor `4` (`0b000100`) chega ao registrador como `~000100 = 111011`, então **`led[2]` acende**. Cada instrução ocupa um período de `cpu_clk` (≈ 1,24 s): a primeira borda ocorre ≈ 0,62 s após a configuração, o `add` termina na terceira borda (≈ 3,1 s) e, em seguida, o `sw` grava o resultado. O programa se repete a cada 8 instruções (≈ 9,9 s), regravando o mesmo valor.
  
 ## Estrutura do repositório
+
+```
+nano1k/
+├── Makefile                 # síntese → place & route → bitstream → gravação
+├── risc.v                   # top: divisor de clock, instâncias e periférico de LEDs
+├── control.v                # unidade de controle
+├── datapath.v               # PC, ROM, banco de registradores, ULA e barramento de dados
+├── tangnano1k.cst           # restrições de pinos da Tang Nano 9K
+└── firmware/
+    ├── configure.sh         # assembly → firmware.hex
+    ├── firmware.s           # programa em assembly (LED = on / off)
+    └── firmware.hex         # (gerado) imagem da ROM lida pelo $readmemh
+```
  
 ```
 nano9k/
@@ -180,19 +193,6 @@ nano9k/
         ├── main.c           # exemplo em C
         ├── configure.sh     # C → prog.elf + disassembly
         └── prog.elf         # (gerado)
-```
-
-```
-nano1k/
-├── Makefile                 # síntese → place & route → bitstream → gravação
-├── risc.v                   # top: divisor de clock, instâncias e periférico de LEDs
-├── control.v                # unidade de controle
-├── datapath.v               # PC, ROM, banco de registradores, ULA e barramento de dados
-├── tangnano9k.cst           # restrições de pinos da Tang Nano 9K
-└── firmware/
-    ├── configure.sh         # assembly → firmware.hex
-    ├── firmware.s           # programa em assembly (LED = on / off)
-    └── firmware.hex         # (gerado) imagem da ROM lida pelo $readmemh
 ```
 
 <a name="ferramentas"></a>
