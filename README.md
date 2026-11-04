@@ -185,9 +185,6 @@ risc-v/
         ├── configure.sh     # C → prog.elf + disassembly
         └── prog.elf         # (gerado)
 ```
- 
-Os arquivos marcados como *(gerado)* podem ser recriados pelo fluxo de build e normalmente não precisam ser versionados.
-
 
 <a name="ferramentas"></a>
 ## Ferramentas Utilizadas (Toolchain 100% Open Source)
