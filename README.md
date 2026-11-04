@@ -166,7 +166,7 @@ O valor `4` (`0b000100`) chega ao registrador como `~000100 = 111011`, então **
 ## Estrutura do repositório
  
 ```
-risc-v/
+nano9k/
 ├── Makefile                 # síntese → place & route → bitstream → gravação
 ├── risc.v                   # top: divisor de clock, instâncias e periférico de LEDs
 ├── control.v                # unidade de controle
@@ -180,6 +180,19 @@ risc-v/
         ├── main.c           # exemplo em C
         ├── configure.sh     # C → prog.elf + disassembly
         └── prog.elf         # (gerado)
+```
+
+```
+nano1k/
+├── Makefile                 # síntese → place & route → bitstream → gravação
+├── risc.v                   # top: divisor de clock, instâncias e periférico de LEDs
+├── control.v                # unidade de controle
+├── datapath.v               # PC, ROM, banco de registradores, ULA e barramento de dados
+├── tangnano9k.cst           # restrições de pinos da Tang Nano 9K
+└── firmware/
+    ├── configure.sh         # assembly → firmware.hex
+    ├── firmware.s           # programa em assembly (LED = on / off)
+    └── firmware.hex         # (gerado) imagem da ROM lida pelo $readmemh
 ```
 
 <a name="ferramentas"></a>
