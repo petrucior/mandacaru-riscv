@@ -159,7 +159,7 @@ Imagem de ROM gerada (`firmware/firmware.hex`) e execução:
 | 2 | `add x3, x1, x2` | `002081b3` | `x3 ← 4` |
 | 3 | `sw x3, 0(x0)` | `00302023` | `mem[0x0] ← 4` → LEDs |
 | 4 | `nop` | `00000013` | Nenhum |
-| 5–7 | n/a | n/a | Não preenchidas pelo `.hex` (veja [limitações](#limitações-conhecidas)) |
+| 5–7 | n/a | n/a | Não preenchidas pelo `.hex` |
  
 O valor `4` (`0b000100`) chega ao registrador como `~000100 = 111011`, então **`led[2]` acende**. Cada instrução ocupa um período de `cpu_clk` (≈ 1,24 s): a primeira borda ocorre ≈ 0,62 s após a configuração, o `add` termina na terceira borda (≈ 3,1 s) e, em seguida, o `sw` grava o resultado. O programa se repete a cada 8 instruções (≈ 9,9 s), regravando o mesmo valor.
  
