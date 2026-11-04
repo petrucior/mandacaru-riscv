@@ -163,10 +163,6 @@ Imagem de ROM gerada (`firmware/firmware.hex`) e execução:
  
 O valor `4` (`0b000100`) chega ao registrador como `~000100 = 111011`, então **`led[2]` acende**. Cada instrução ocupa um período de `cpu_clk` (≈ 1,24 s): a primeira borda ocorre ≈ 0,62 s após a configuração, o `add` termina na terceira borda (≈ 3,1 s) e, em seguida, o `sw` grava o resultado. O programa se repete a cada 8 instruções (≈ 9,9 s), regravando o mesmo valor.
  
-Variantes do mesmo programa:
- 
-- **`firmware/firmware.s_`:** igual ao anterior, mas com `addi x1, x0, 2`, o que dá `x3 = 5` (`0b000101`) e acende `led[0]` e `led[2]`.
-- **`firmware/code/main.c`:** versão em C do mesmo conceito (`LEDS = 2 + 3`, resultado 5). Veja [Firmware em C](#b-firmware-em-c).
 ## Estrutura do repositório
  
 ```
