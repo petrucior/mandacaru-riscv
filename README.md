@@ -127,7 +127,6 @@ No `risc.v`, um `sw` cujo endereço efetivo seja `0x00000000` grava os 6 bits me
 Os LEDs da Tang Nano 9K são **ativos em nível baixo**, então o hardware inverte o dado (`led <= ~data_wdata[5:0]`) e inicia com `6'b111111` (todos apagados). Para o programador, vale a regra direta: o bit `n` do valor escrito controla `led[n]`.
  
 ## Conjunto de instruções
----
  
 | Instrução | Formato | Codificação (campos, do bit 31 ao 0) | Efeito |
 |---|---|---|---|
