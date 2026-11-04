@@ -135,7 +135,7 @@ Os LEDs da Tang Nano 9K são **ativos em nível baixo**, então o hardware inver
 | `sw rs2, imm(rs1)` | S | `imm[11:5]` `rs2` `rs1` `010` `imm[4:0]` `0100011` | `mem[rs1 + signal_ext(imm)] ← rs2` (só tem efeito em `0x0`, nos LEDs) |
 | `nop` (`addi x0, x0, 0`) | I | `0x00000013` | Nenhum (a escrita em `x0` é ignorada) |
  
-Qualquer outra instrução vira NOP, pois o `control` não aciona nenhum sinal para opcodes desconhecidos. Veja também as [limitações](#limitações-conhecidas): como só o `opcode` é decodificado, instruções com os mesmos opcodes (por exemplo `sub`, `slli`, `sh`) seriam executadas como `add`, `addi` e `sw`.
+Qualquer outra instrução vira NOP, pois o `control` não aciona nenhum sinal para opcodes desconhecidos.
  
 ## Programa de exemplo
  
